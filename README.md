@@ -13,3 +13,17 @@ https://editorjs.io
 
 https://github.com/nhn/tui.image-editor
 
+mockup website เรา *1
+
+vue frontend
+backend แยก user
+
+cloundflare ตัวฟรี
+
+githubpages (netlify)
+
+domain name heroku(free)
+
+photosharing (หา image hosting สักตัว หาอันที่มีapi)
+
+photo editor(js เลือกมาสักตัว)เดวอาจจะเขียนเอง
