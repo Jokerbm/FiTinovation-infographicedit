@@ -1,12 +1,211 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>fitinovation-infographicedit</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>INART</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about"><i class="fa fa-home" aria-hidden="true"></i> About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects"><i class="fa fa-briefcase" aria-hidden="true"></i> Projects</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup"><i class="fa fa-paper-plane" aria-hidden="true"></i> Contact</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signin"><i class="fa fa-user" aria-hidden="true"></i> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container d-flex h-100 align-items-center">
+            <div class="mx-auto text-center">
+                <h1 class="mx-auto my-0 text-uppercase">INART</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">Make creative with free infographic.</h2>
+                <a class="btn btn-primary js-scroll-trigger" href="#signin">Get Started</a>
+            </div>
+        </div>
+    </header>
+    <!-- About-->
+    <section class="about-section text-center" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-5">
+                    <img class="img-fluid mb-15 mb-lg-5" src="assets/img/infor.jpg" alt="" /></div>
+                <div class="col-xl-4 col-lg-7">
+                    <br><br>
+                    <h2 class="text-black-50 mb-8s mb-md-5">ABOUT INFORGRAPHIC</h2>
+                    <p class="text-black-50">The narrative or explanations of the various information using 'images' in communication. As well as having a colorful design, gimmicks, and attracting readers.</p>
+                    <h2 class="text-black-50 mb-8s mb-md-5">BENEFITS OF USINF INFOGRAPHIC</h2>
+                    <p>
+                        <ul align='left' class="text-black-50">
+                            <li>Easier to understand information </li>
+                            <li>Making others remember</li>
+                            <li>Create a good image</li>
+                            <li>Presenting information in many forms</li>
+                            <li>The sharing rate is higher than other types of content.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects-->
+    <section class="projects-section bg-light" id="projects">
+        <div class="container">
+            <div class="w3-content w3-section" style="max-width:100%">
+                <img class="mySlides" src="assets/img/1.jpg" style="width:100%">
+                <img class="mySlides" src="assets/img/2.jpg" style="width:100%">
+                <img class="mySlides" src="assets/img/3.jpg" style="width:100%">
+                <img class="mySlides" src="assets/img/4.jpg" style="width:100%">
+                <br><br>
+            </div>
+            <div class="w3-row-padding w3-section">
+                <div class="col" align="center">
+                    <img class="demo w3-border w3-hover-shadow" src="assets/img/1.jpg" style="width:20%" onclick="currentDiv(1)">
+                    <img class="demo w3-border w3-hover-shadow" src="assets/img/2.jpg" style="width:20%" onclick="currentDiv(2)">
+                    <img class="demo w3-border w3-hover-shadow" src="assets/img/3.jpg" style="width:20%" onclick="currentDiv(3)">
+                    <img class="demo w3-border w3-hover-shadow" src="assets/img/4.jpg" style="width:20%" onclick="currentDiv(4)">
+                </div>
+            </div>
+
+            <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+
+                function plusDivs(n) {
+                    showDivs(slideIndex += n);
+                }
+
+                function currentDiv(n) {
+                    showDivs(slideIndex = n);
+                }
+
+                function showDivs(n) {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("demo");
+                    if (n > x.length) {
+                        slideIndex = 1
+                    }
+                    if (n < 1) {
+                        slideIndex = x.length
+                    };
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" w3-border-red", "");
+                    }
+                    x[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " w3-border-red";
+                }
+            </script>
+            <!--      <div class="container">
+ 
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="" /></div>
+                <div class="col-lg-6">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-left">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center no-gutters">
+                <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-02.jpg" alt="" /></div>
+                <div class="col-lg-6 order-lg-first">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-right">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </section>
+
+    <!-- Signup-->
+    <section class="signup-section" id="signup">
+        <!-- Contact-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Address</h4>
+                            <hr class="my-4" />
+                            <div class="small text-black-50">คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง เลขที่ 1 ซอยฉลองกรุง 1 แขวงลาดกระบัง เขตลาดกระบัง กรุงเทพฯ 10520</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-envelope text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Email</h4>
+                            <hr class="my-4" />
+                            <div class="small text-black-50">62070160@it.kmitl.ac.th 62070049@it.kmitl.ac.th
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Phone</h4>
+                            <hr class="my-4" />
+                            <div class="small text-black-50">+66 (0) 2723 4910</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="col-md-10 col-lg-8 mx-auto">
+            <div class="social d-flex justify-content-center">
+                <a class="mx-2" href="https://twitter.com/itkmitl"><i class="fab fa-twitter"></i></a>
+                <a class="mx-2" href="https://web.facebook.com/ITLadkrabang?_rdc=1&_rdr"><i class="fab fa-facebook-f"></i></a>
+                <a class="mx-2" href="https://github.com/Jokerbm/FiTinovation-infographicedit"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer bg-black small text-center text-white-50">
+        <div>IT@KMITL 17</div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
 </html>
